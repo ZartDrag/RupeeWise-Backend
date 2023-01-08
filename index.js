@@ -8,6 +8,7 @@ const port = 3000
 
 app.get('/', (req, res) => res.send('Hello User!'));
 
+app.use(express.json())
 app.use('/authenticate', require('./routes/auth'));
 app.use('/getExpenses', require('./routes/expenses'));
 
