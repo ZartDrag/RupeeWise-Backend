@@ -1,0 +1,19 @@
+{
+  "name": "rupeewise-backend",
+  "version": "1.0.0",
+  "description": "the backend for the amazing RupeeWise",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "yes"
+  },
+  "author": "Katak",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^6.8.3"
+  }
+}
