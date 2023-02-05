@@ -7,6 +7,8 @@ const jwt = require("jsonwebtoken");
 const fetchuser = require("../middleware/fetchUser");
 
 const JWTSECRET = "SomeGoodJWTSECRETStringHardcodedTemporarily";
+
+//No Login Required
 //to register a new user
 router.post(
   "/register",
@@ -94,7 +96,7 @@ router.post(
         },
       };
       const authToken = jwt.sign(data, JWTSECRET);
-      //return an authentication token so the user can avoid logging in again and again
+      //return an authentication token so the user can stay logged in
       res.json({ authToken });
     } catch (error) {
       console.error(error.message);

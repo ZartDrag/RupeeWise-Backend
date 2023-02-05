@@ -11,7 +11,7 @@ app.get('/', (req, res) => res.send('Hello User!'));
 
 app.use(express.json())
 app.use('/authenticate', require('./routes/auth'));
-app.use('/getExpenses', require('./routes/expenses'));
+app.use('/expenses', require('./routes/expenses'));
 
 app.get('/signup', (req, res) => {
     res.send('You tried to signup')
