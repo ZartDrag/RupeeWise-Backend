@@ -1,6 +1,6 @@
 //will be used to connect to the database
 const mongoose = require('mongoose'); //import statement
-const mongoURI = "mongodb+srv://katak:kitrak@cluster0.lgnhsk2.mongodb.net/?retryWrites=true&w=majority"
+const mongoURI = "mongodb+srv://RupeeWise:qwerty123@cluster0.lgnhsk2.mongodb.net/RupeeWise?retryWrites=true&w=majority"
 //MongoDB connection string
 
 const connectToMongo = ()=>{
