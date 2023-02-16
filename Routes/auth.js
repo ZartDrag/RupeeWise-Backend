@@ -12,13 +12,15 @@ const JWTSECRET = "SomeGoodJWTSECRETStringHardcodedTemporarily";
 //to register a new user
 router.post(
   "/register",
-
   // username must be an email
   body("username", "Enter a valid email address").isEmail(),
   // password must be at least 6 chars long
   body("password", "Password must be 6 characters long").isLength({ min: 6 }),
 
   async (req, res) => {
+    
+    console.log(req.headers);
+    console.log(req.body);
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
       return res.status(400).json({ errors: errors.array() });
@@ -63,14 +65,15 @@ router.post(
 );
 
 router.post(
-  "/login",
-
+  "/login",  
   // username must be an email
   body("username", "Enter a valid email address").isEmail(),
   // password field must not be blank
   body("password", "Password must be 6 characters long").exists(),
 
   async (req, res) => {
+    console.log(req.headers);
+    console.log(req.body);
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
       return res.status(400).json({ errors: errors.array() });
